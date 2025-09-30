@@ -2,6 +2,7 @@ export const Section = {
     Container,
     Title,
     SubTitle,
+    Point,
 };
 
 function Container({
@@ -12,7 +13,7 @@ function Container({
     className?: string;
 }) {
     return (
-        <div className={`p-20 ${className}`}>
+        <div className={`p-20 space-y-8 ${className}`}>
             {children}
         </div>
     );
@@ -45,5 +46,17 @@ function SubTitle({
         <p className={`text-xl font-light ${className}`}>
             {children}
         </p>
+    );
+}
+
+function Point({
+    children,
+}: {
+    children: React.ReactNode;
+}) {
+    return (
+        <h2 className="font-bold text-xs text-[#6F6F6F] uppercase mb-1">
+            {children}
+        </h2>
     );
 }

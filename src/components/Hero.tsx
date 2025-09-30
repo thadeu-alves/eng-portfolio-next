@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Hero() {
     return (
-        <Section.Container className="bg-[#D9D9D9] space-y-8">
+        <Section.Container className="bg-[#D9D9D9]">
             <div className="space-y-4">
                 <Section.Title>
                     Transformando Conceitos em Realidade
