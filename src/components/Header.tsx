@@ -28,7 +28,7 @@ export function Header() {
     ];
 
     return (
-        <div className="bg-[#D9D9D9] px-20 py-4 flex justify-between items-center relative">
+        <div className="bg-[#D9D9D9] px-8 py-4 flex justify-between items-center relative">
             <Link href="/">
                 <Image
                     src="/logo.svg"

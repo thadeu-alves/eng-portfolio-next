@@ -13,7 +13,9 @@ function Container({
     className?: string;
 }) {
     return (
-        <div className={`p-20 space-y-8 ${className}`}>
+        <div
+            className={`py-20 px-8 space-y-8 ${className}`}
+        >
             {children}
         </div>
     );
