@@ -16,7 +16,7 @@ export function ButtonLink({
             href={href}
             className={`font-medium ${
                 variant
-                    ? "border border-[#D9D9D9] text-[#D9D9D9]"
+                    ? "border border-[#6F6F6F] text-[#6F6F6F]"
                     : "bg-[#E4A42A]"
             } px-4 py-2 rounded ${className}`}
         >
