@@ -3,7 +3,7 @@ import { Section } from "./Section";
 import { ButtonLink } from "./ButtonLink";
 import Image from "next/image";
 
-export default function Hero() {
+export function Hero() {
     return (
         <Section.Container className="bg-[#D9D9D9]">
             <div className="space-y-4">

@@ -22,13 +22,17 @@ function Container({
 function Title({
     children,
     className,
+    variant,
 }: {
     children: React.ReactNode;
     className?: string;
+    variant?: string;
 }) {
     return (
         <h1
-            className={`text-4xl font-semibold ${className}`}
+            className={`font-semibold ${
+                variant ? `text-${variant}` : "text-4xl"
+            } ${className}`}
         >
             {children}
         </h1>
@@ -38,12 +42,18 @@ function Title({
 function SubTitle({
     children,
     className,
+    variant,
 }: {
     children: React.ReactNode;
     className?: string;
+    variant?: string;
 }) {
     return (
-        <p className={`text-xl font-light ${className}`}>
+        <p
+            className={`font-light ${
+                variant ? `text-${variant}` : "text-xl"
+            } ${className}`}
+        >
             {children}
         </p>
     );
