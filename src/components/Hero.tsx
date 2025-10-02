@@ -5,8 +5,11 @@ import Image from "next/image";
 
 export function Hero() {
     return (
-        <Section.Container className="bg-[#D9D9D9]">
-            <div className="space-y-4">
+        <Section.Container
+            background="bg-[#D9D9D9]"
+            className="md:flex md:justify-between md:gap-20"
+        >
+            <Section.TitleContainer>
                 <Section.Title>
                     Transformando Conceitos em Realidade
                     Concreta
@@ -18,9 +21,9 @@ export function Hero() {
                 <ButtonLink href="/#contato">
                     Fale Comigo
                 </ButtonLink>
-            </div>
+            </Section.TitleContainer>
 
-            <div>
+            <Section.ImageContainer>
                 <Image
                     src="/hero-image.png"
                     alt="imagem do hero"
@@ -28,7 +31,7 @@ export function Hero() {
                     height={100}
                     className="w-full"
                 />
-            </div>
+            </Section.ImageContainer>
         </Section.Container>
     );
 }

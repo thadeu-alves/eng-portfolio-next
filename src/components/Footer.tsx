@@ -27,7 +27,10 @@ export function Footer() {
     ];
 
     return (
-        <Section.Container className="bg-black border-t border-t-[#6F6F6F] space-y-8">
+        <Section.Container
+            background="bg-black"
+            className="border-t border-t-[#6F6F6F] md:space-y-12"
+        >
             <div className="flex justify-between items-center">
                 <Link href="/">
                     <Image
@@ -67,7 +70,7 @@ export function Footer() {
                     </Link>
                 </div>
             </div>
-            <div className="text-[#6F6F6F] flex flex-col gap-8">
+            <div className="text-[#6F6F6F] flex flex-col gap-8 md:flex-row md:justify-between">
                 <p className="max-w-60">
                     Lorem Ipsum is simply dummy text of the
                     printing and typesetting industry

@@ -31,18 +31,23 @@ export function Projects() {
     ];
 
     return (
-        <Section.Container>
-            <div className="space-y-8">
-                <Section.Point>Projetos</Section.Point>
-                <Section.Title>
-                    Nossa Obra-Prima Estrutural
-                </Section.Title>
+        <Section.Container
+            className="space-y-16"
+            id="projetos"
+        >
+            <div className="space-y-8 md:space-y-0 md:flex md:justify-between md:items-end-safe">
+                <div>
+                    <Section.Point>Projetos</Section.Point>
+                    <Section.Title fullWidth>
+                        Nossa Obra-Prima Estrutural
+                    </Section.Title>
+                </div>
                 <ButtonLink href="" variant>
                     Saiba Mais
                 </ButtonLink>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-12 md:space-y-12">
                 {projects.map(
                     (
                         {
@@ -57,27 +62,58 @@ export function Projects() {
                         return (
                             <div
                                 key={id}
-                                className="space-y-4"
+                                className={`space-y-8 md:flex md:justify-between md:gap-20 ${
+                                    id === 1 &&
+                                    "md:flex-row-reverse"
+                                }`}
                             >
-                                <Image
-                                    src={image}
-                                    alt="imagem do hero"
-                                    width={100}
-                                    height={100}
-                                    className="w-full"
-                                />
-                                <Section.Point>
-                                    {city}
-                                </Section.Point>
-                                <Section.Title>
-                                    {title}
-                                </Section.Title>
-                                <Section.SubTitle>
-                                    {description}
-                                </Section.SubTitle>
-                                <ButtonLink href={link}>
-                                    Ver Projeto
-                                </ButtonLink>
+                                <div className="md:w-1/2">
+                                    <Image
+                                        src={image}
+                                        alt="Imagem do Projeto"
+                                        width={100}
+                                        height={100}
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                                <Section.TitleContainer
+                                    className={
+                                        id === 1
+                                            ? "md:flex md:flex-col md:gap-4 md:items-end"
+                                            : ""
+                                    }
+                                >
+                                    <div
+                                        className={
+                                            id === 1
+                                                ? "md:text-right"
+                                                : ""
+                                        }
+                                    >
+                                        <Section.Point>
+                                            {city}
+                                        </Section.Point>
+                                        <Section.Title>
+                                            {title}
+                                        </Section.Title>
+                                    </div>
+                                    <Section.SubTitle>
+                                        {description}
+                                    </Section.SubTitle>
+                                    <div
+                                        className={
+                                            id === 1
+                                                ? "md:mt-[-10px]"
+                                                : ""
+                                        }
+                                    >
+                                        <ButtonLink
+                                            href={link}
+                                        >
+                                            Ver Projeto
+                                        </ButtonLink>
+                                    </div>
+                                </Section.TitleContainer>
                             </div>
                         );
                     }

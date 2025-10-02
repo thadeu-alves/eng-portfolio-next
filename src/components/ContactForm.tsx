@@ -76,7 +76,7 @@ export function ContactForm() {
 
             <button
                 type="submit"
-                className="font-medium bg-[#E4A42A] px-4 py-2 rounded text-black mt-8 cursor-pointer"
+                className="text-xl font-medium bg-[#E4A42A] px-6 py-3 rounded text-black mt-8 cursor-pointer border border-[#E4A42A] hover:bg-transparent hover:text-[#E4A42A] transition-all"
             >
                 Enviar
             </button>

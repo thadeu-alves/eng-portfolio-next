@@ -3,17 +3,20 @@ import { Section } from "./Section";
 
 export function About() {
     return (
-        <Section.Container>
-            <div>
+        <Section.Container
+            className="md:flex md:justify-between md:gap-20"
+            id="sobre"
+        >
+            <Section.ImageContainer>
                 <Image
                     src="/hero-image.png"
                     alt="imagem do hero"
                     width={100}
                     height={100}
-                    className="w-full"
+                    className="w-full h-full"
                 />
-            </div>
-            <div className="space-y-4">
+            </Section.ImageContainer>
+            <Section.TitleContainer>
                 <Section.Point>Sobre mim</Section.Point>
                 <Section.Title>
                     Conheça a Mente por trás da Inovação.
@@ -27,7 +30,7 @@ export function About() {
                     and scrambled it to make a type specimen
                     book.{" "}
                 </Section.SubTitle>
-            </div>
+            </Section.TitleContainer>
         </Section.Container>
     );
 }

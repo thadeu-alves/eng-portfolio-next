@@ -14,11 +14,11 @@ export function ButtonLink({
     return (
         <Link
             href={href}
-            className={`font-medium ${
+            className={`text-lg md:text-xl font-medium ${
                 variant
-                    ? "border border-[#6F6F6F] text-[#6F6F6F]"
-                    : "bg-[#E4A42A]"
-            } px-4 py-2 rounded ${className}`}
+                    ? "border border-[#6F6F6F] text-[#6F6F6F] hover:bg-[#6F6F6F] hover:text-white transition-all"
+                    : "bg-[#E4A42A] border border-[#E4A42A] hover:bg-transparent hover:text-[#E4A42A] transition-all"
+            } px-6 py-3 rounded ${className}`}
         >
             {children}
         </Link>

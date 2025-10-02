@@ -3,12 +3,18 @@ import { Section } from "./Section";
 
 export function Contact() {
     return (
-        <Section.Container className="bg-black text-white">
-            <div className="space-y-8">
+        <Section.Container
+            background="bg-black"
+            className="text-white md:flex md:gap-20"
+            id="contato"
+        >
+            <Section.TitleContainer>
                 <Section.Point>Contato</Section.Point>
                 <Section.Title>Fale Comigo</Section.Title>
-            </div>
-            <ContactForm />
+            </Section.TitleContainer>
+            <Section.ImageContainer>
+                <ContactForm />
+            </Section.ImageContainer>
         </Section.Container>
     );
 }

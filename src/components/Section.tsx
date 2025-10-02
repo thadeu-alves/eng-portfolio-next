@@ -1,11 +1,13 @@
 export const Section = {
     Container,
+    TitleContainer,
+    ImageContainer,
     Title,
     SubTitle,
     Point,
 };
 
-function Container({
+function TitleContainer({
     children,
     className,
 }: {
@@ -14,9 +16,39 @@ function Container({
 }) {
     return (
         <div
-            className={`py-20 px-8 space-y-8 ${className}`}
+            className={`space-y-6 md:w-1/2 md:space-y-8 ${className}`}
         >
             {children}
+        </div>
+    );
+}
+
+function ImageContainer({
+    children,
+}: {
+    children: React.ReactNode;
+}) {
+    return <div className="md:w-1/2">{children}</div>;
+}
+
+function Container({
+    children,
+    className,
+    background,
+    id,
+}: {
+    children: React.ReactNode;
+    className?: string;
+    background?: string;
+    id?: string;
+}) {
+    return (
+        <div className={`${background}`} id={id}>
+            <div
+                className={`py-20 px-4 space-y-16 md:container md:mx-auto ${className}`}
+            >
+                {children}
+            </div>
         </div>
     );
 }
@@ -25,15 +57,21 @@ function Title({
     children,
     className,
     variant,
+    fullWidth,
 }: {
     children: React.ReactNode;
     className?: string;
     variant?: string;
+    fullWidth?: boolean;
 }) {
     return (
         <h1
             className={`font-semibold ${
-                variant ? `text-${variant}` : "text-4xl"
+                !fullWidth && "max-w-120"
+            } ${
+                variant
+                    ? `text-${variant}`
+                    : "text-4xl md:text-5xl"
             } ${className}`}
         >
             {children}
@@ -52,8 +90,10 @@ function SubTitle({
 }) {
     return (
         <p
-            className={`font-light ${
-                variant ? `text-${variant}` : "text-xl"
+            className={`font-light max-w-100 ${
+                variant
+                    ? `text-${variant}`
+                    : "text-lg md:text-xl"
             } ${className}`}
         >
             {children}

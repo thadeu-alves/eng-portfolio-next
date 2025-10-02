@@ -45,7 +45,7 @@ export function ContactFormLabel<
             <input
                 type={type}
                 id={title}
-                className={`mb-4 block w-full rounded shadow-sm border-2 border-[#6F6F6F] px-4 py-2  text-white focus:outline-0 ${
+                className={`mb-4 block w-full rounded shadow-sm border-2 border-[#6F6F6F] px-6 py-3 text-lg font-medium text-white focus:outline-0 ${
                     error ? "border-red-500" : ""
                 }`}
                 {...inputProps}
