@@ -51,7 +51,7 @@ export function Header() {
             </button>
 
             <ul
-                className={`absolute bg-[#D9D9D9] left-0 top-20 text-center py-8 space-y-4 w-full lg:static lg:flex lg:gap-8 lg:w-fit ${
+                className={`absolute bg-[#D9D9D9] left-0 top-20 text-center py-8 space-y-4 w-full border-b-2 border-b-black lg:static lg:flex lg:gap-8 lg:w-fit ${
                     open ? "block" : "hidden"
                 }`}
             >
@@ -59,7 +59,7 @@ export function Header() {
                     return (
                         <li
                             key={id}
-                            className={` ${
+                            className={`text-xl ${
                                 href === path
                                     ? "text-[#E4A42A]"
                                     : "text-black"
