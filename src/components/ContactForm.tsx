@@ -41,7 +41,7 @@ export function ContactForm() {
             <ContactFormLabel
                 type="text"
                 title="name"
-                label="Name"
+                label="Nome"
                 register={register}
                 error={errors?.name?.message}
                 required
@@ -59,7 +59,7 @@ export function ContactForm() {
             <ContactFormLabel
                 type="text"
                 title="subject"
-                label="Subject"
+                label="Assunto"
                 register={register}
                 error={errors?.subject?.message}
                 required
@@ -68,13 +68,18 @@ export function ContactForm() {
             <ContactFormLabel
                 type="text"
                 title="message"
-                label="Message"
+                label="Mensagem"
                 register={register}
                 error={errors?.message?.message}
                 required
             />
 
-            <button type="submit">Enviar</button>
+            <button
+                type="submit"
+                className="font-medium bg-[#E4A42A] px-4 py-2 rounded text-black mt-8 cursor-pointer"
+            >
+                Enviar
+            </button>
         </form>
     );
 }

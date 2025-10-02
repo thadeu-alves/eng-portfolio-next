@@ -32,7 +32,7 @@ export function ContactFormLabel<
         : { name: title };
 
     return (
-        <div>
+        <div className="text-[#6F6F6F] space-y-2">
             <label
                 htmlFor={title}
                 className="block text-sm font-medium text-[var(--primary)]"
@@ -45,7 +45,7 @@ export function ContactFormLabel<
             <input
                 type={type}
                 id={title}
-                className={`mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2 border ${
+                className={`mb-4 block w-full rounded shadow-sm border-2 border-[#6F6F6F] px-4 py-2  text-white focus:outline-0 ${
                     error ? "border-red-500" : ""
                 }`}
                 {...inputProps}
